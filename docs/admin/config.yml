@@ -1,0 +1,39 @@
+backend:
+  name: github
+  repo: votre-username/devops-backend-logbook
+  branch: main
+
+media_folder: "docs/assets/images"
+public_folder: "/assets/images"
+
+collections:
+  - name: "journal"
+    label: "📓 Journal Hebdomadaire"
+    folder: "docs/01-journal"
+    create: true
+    slug: "{{year}}-w{{week}}"
+    fields:
+      - { label: "Titre", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Semaine", name: "week", widget: "string" }
+      - { label: "Objectif", name: "objective", widget: "text" }
+      - { label: "Fait", name: "done", widget: "markdown" }
+      - { label: "Bloqué / Cassé", name: "blocked", widget: "markdown" }
+      - { label: "Appris", name: "learned", widget: "markdown" }
+      - { label: "Prochaine Étape", name: "next", widget: "markdown" }
+
+  - name: "incidents"
+    label: "🚨 Incidents & Postmortems"
+    folder: "docs/05-incidents"
+    create: true
+    slug: "postmortem-{{slug}}"
+    fields:
+      - { label: "Titre Incident", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Sévérité", name: "severity", widget: "select", options: ["P1 - Critique", "P2 - Majeur", "P3 - Mineur"] }
+      - { label: "Résumé", name: "summary", widget: "text" }
+      - { label: "Chronologie", name: "timeline", widget: "markdown" }
+      - { label: "Cause Racine", name: "root_cause", widget: "markdown" }
+      - { label: "Impact", name: "impact", widget: "text" }
+      - { label: "Résolution", name: "resolution", widget: "markdown" }
+      - { label: "Actions Préventives", name: "preventive_actions", widget: "markdown" }
