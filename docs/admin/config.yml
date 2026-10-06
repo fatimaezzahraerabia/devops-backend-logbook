@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: votre-username/devops-backend-logbook
+  repo: fatimaezzahraerabia/devops-backend-logbook
   branch: main
 
 media_folder: "docs/assets/images"

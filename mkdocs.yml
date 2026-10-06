@@ -1,7 +1,7 @@
 site_name: DevOps & Backend Engineering Logbook
 site_description: Carnet de bord d'apprentissage, projets, architecture et incidents DevOps & Backend.
-site_author: DevOps Engineer Candidate
-site_url: https://username.github.io/devops-backend-logbook/
+site_author: Fatima-Ezzahrae Rabia
+site_url: https://fatimaezzahraerabia.github.io/devops-backend-logbook/
 
 theme:
   name: material
