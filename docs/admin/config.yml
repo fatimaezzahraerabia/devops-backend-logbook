@@ -2,6 +2,7 @@ backend:
   name: github
   repo: fatimaezzahraerabia/devops-backend-logbook
   branch: main
+  base_url: https://decap-cms-oauth-pkce.vercel.app
 
 media_folder: "docs/assets/images"
 public_folder: "/assets/images"
