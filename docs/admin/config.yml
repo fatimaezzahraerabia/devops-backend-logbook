@@ -22,6 +22,20 @@ collections:
       - { label: "Appris", name: "learned", widget: "markdown" }
       - { label: "Prochaine Étape", name: "next", widget: "markdown" }
 
+  - name: "projets"
+    label: "🚀 Fiches Projets"
+    folder: "docs/04-projets"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Nom du Projet", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Statut", name: "status", widget: "select", options: ["En Production", "En Développement", "En Pause"] }
+      - { label: "Lien Dépôt GitHub", name: "github_repo", widget: "string", required: false }
+      - { label: "Lien Démo Live", name: "live_demo", widget: "string", required: false }
+      - { label: "Description & Contexte", name: "description", widget: "text" }
+      - { label: "Contenu Détaillé (Markdown)", name: "body", widget: "markdown" }
+
   - name: "incidents"
     label: "🚨 Incidents & Postmortems"
     folder: "docs/05-incidents"
