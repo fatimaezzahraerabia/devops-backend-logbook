@@ -3,6 +3,10 @@ site_description: Carnet de bord d'apprentissage, projets, architecture et incid
 site_author: Fatima-Ezzahrae Rabia
 site_url: https://fatimaezzahraerabia.github.io/devops-backend-logbook/
 
+repo_url: https://github.com/fatimaezzahraerabia/devops-backend-logbook
+repo_name: devops-backend-logbook
+edit_uri: edit/main/docs/
+
 theme:
   name: material
   language: fr
@@ -22,14 +26,20 @@ theme:
         icon: material/brightness-4
         name: Passer au mode clair
   features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
     - navigation.tabs
     - navigation.sections
+    - navigation.indexes
     - navigation.top
-    - navigation.tracking
     - search.suggest
     - search.highlight
+    - search.share
     - content.code.copy
+    - content.code.select
     - content.code.annotate
+    - content.action.edit
 
 markdown_extensions:
   - pymdownx.superfences:
@@ -39,12 +49,17 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.highlight:
       anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.details
   - pymdownx.mark
+  - pymdownx.keys
+  - pymdownx.tasklist:
+      custom_checkbox: true
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
@@ -57,24 +72,35 @@ markdown_extensions:
 plugins:
   - search
 
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/fatimaezzahraerabia
+      name: Profil GitHub
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/fatima-ezzahrae-rabia
+      name: Profil LinkedIn
+
 nav:
   - ACCUEIL: index.md
   - 🗺️ PLAN & ROADMAP:
       - Feuille de route (90 Jours): 00-plan/roadmap.md
   - 📓 JOURNAL:
+      - 01-journal/index.md
       - 2026 - Semaine 01: 01-journal/2026-w01.md
       - Modèle de note: 01-journal/template.md
-  - 🐍 BACKEND:
-      - Standards & Architecture: 02-backend/index.md
-  - 🐳 DEVOPS & INFRA:
-      - Guide & Stack DevOps: 03-devops/index.md
+  - 🐍 BACKEND: 02-backend/index.md
+  - 🐳 DEVOPS & INFRA: 03-devops/index.md
   - 🚀 PROJETS:
+      - 04-projets/index.md
       - API Gestion de Tâches (Fil Rouge): 04-projets/api-gestion-taches.md
       - Modèle Fiche Projet: 04-projets/template.md
   - 🚨 INCIDENTS & POSTMORTEMS:
+      - 05-incidents/index.md
       - Postmortem #001 - Latence DB: 05-incidents/postmortem-001.md
       - Modèle Postmortem: 05-incidents/template.md
   - 💡 DÉCISIONS (ADR):
+      - 06-decisions/index.md
       - ADR-001 - Choix FastAPI & Postgres: 06-decisions/adr-001-fastapi-vs-flask-django.md
       - ADR-002 - File d'attente ARQ vs Celery: 06-decisions/adr-002-async-queue-arq-vs-celery.md
       - Modèle ADR: 06-decisions/template.md

@@ -1,0 +1,69 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "task-manager-api"
+version = "0.1.0"
+description = "Production-grade FastAPI Task Management Service"
+authors = [{ name = "Fatima-Ezzahrae Rabia" }]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.110.0",
+    "uvicorn[standard]>=0.28.0",
+    "pydantic>=2.6.0",
+    "pydantic-settings>=2.2.0",
+    "sqlalchemy>=2.0.28",
+    "asyncpg>=0.29.0",
+    "alembic>=1.13.0",
+    "pyjwt[crypto]>=2.8.0",
+    "pwdlib[argon2,bcrypt]>=0.2.0",
+    "python-multipart>=0.0.9",
+    "arq>=0.25.0",
+    "redis>=5.0.0",
+    "structlog>=24.1.0",
+    "prometheus-fastapi-instrumentator>=7.0.0",
+    "httpx>=0.27.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.1.0",
+    "pytest-asyncio>=0.23.0",
+    "pytest-cov>=4.1.0",
+    "ruff>=0.3.0",
+    "mypy>=1.9.0",
+]
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+addopts = "-ra -q --cov=app --cov-report=term-missing"
+testpaths = ["tests"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = [
+    "E",      # Errors (pycodestyle)
+    "F",      # Pyflakes
+    "B",      # flake8-bugbear
+    "I",      # isort (tri des imports)
+    "UP",     # pyupgrade (Syntaxe native Python 3.12)
+    "S",      # flake8-bandit (Sécurité & failles)
+    "ASYNC",  # flake8-async (Erreurs async/await)
+    "RUFF",   # Règles spécifiques à Ruff
+]
+ignore = [
+    "S101",   # Autorise l'usage de 'assert' dans les tests Pytest
+]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+ignore_missing_imports = true
+plugins = ["pydantic.mypy"]
