@@ -1,10 +1,10 @@
 # 🚀 Projet Fil Rouge : API de Gestion de Tâches (Task Manager API)
 
-**Statut** : 🟡 En Développement Actif  
-**Dépôt GitHub API** : [github.com/votre-username/task-manager-api](https://github.com/votre-username/task-manager-api)  
-**Démo Live (Koyeb)** : [task-api-demo.koyeb.app/docs](https://task-api-demo.koyeb.app/docs)  
-**Base PostgreSQL** : Neon DB Serverless (Pérenne 0 €)  
-**Couverture de Code** : ![Coverage](https://img.shields.io/badge/coverage-85%25-brightgreen.svg)
+**Statut** : 🟢 En Production  
+**Dépôt GitHub API** : [github.com/fatimaezzahraerabia/devops-backend-logbook](https://github.com/fatimaezzahraerabia/devops-backend-logbook)  
+**Démo Live (Render)** : [devops-backend-logbook.onrender.com/docs](https://devops-backend-logbook.onrender.com/docs)  
+**Base PostgreSQL** : Neon DB Serverless (Frankfurt eu-central-1)  
+**Cache & Queue** : Upstash Redis TLS  
 
 ---
 

@@ -6,12 +6,12 @@ Bienvenue sur mon **carnet de bord d'ingénierie public**. Ce site documente mon
 
 ## 👨‍💻 À propos de moi
 
-- **Profil** : Ingénieur Backend & DevOps
+- **Profil** : Ingénieure Backend & DevOps
 - **Objectif** : Concevoir des applications résilientes, automatisées, testées et supervisées en respectant les standards de production.
 - **Liens** : 
-  - 🐙 [GitHub](https://github.com/votre-username)
-  - 💼 [LinkedIn](https://linkedin.com/in/votre-profil)
-  - 📄 [Mon CV (PDF)](#)
+  - 🐙 [GitHub](https://github.com/fatimaezzahraerabia)
+  - 💼 [LinkedIn](https://linkedin.com/in/fatima-ezzahrae-rabia)
+  - 🚀 [Démo API Task Manager](https://devops-backend-logbook.onrender.com/docs)
 
 ---
 
