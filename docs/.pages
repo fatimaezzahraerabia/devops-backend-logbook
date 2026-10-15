@@ -1,0 +1,10 @@
+nav:
+  - ACCUEIL: index.md
+  - 🗺️ PLAN & ROADMAP: 00-plan
+  - 📓 JOURNAL: 01-journal
+  - 🐍 BACKEND: 02-backend
+  - 🐳 DEVOPS & INFRA: 03-devops
+  - 🚀 PROJETS: 04-projets
+  - 🚨 INCIDENTS & POSTMORTEMS: 05-incidents
+  - 💡 DÉCISIONS (ADR): 06-decisions
+  - ⚡ CHEATSHEETS: 07-cheatsheets

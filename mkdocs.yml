@@ -82,28 +82,4 @@ extra:
       link: https://linkedin.com/in/fatima-ezzahrae-rabia
       name: Profil LinkedIn
 
-nav:
-  - ACCUEIL: index.md
-  - 🗺️ PLAN & ROADMAP:
-      - Feuille de route (90 Jours): 00-plan/roadmap.md
-  - 📓 JOURNAL:
-      - ...
-  - 🐍 BACKEND: 02-backend/index.md
-  - 🐳 DEVOPS & INFRA: 03-devops/index.md
-  - 🚀 PROJETS:
-      - ...
-  - 🚨 INCIDENTS & POSTMORTEMS:
-      - ...
-  - 💡 DÉCISIONS (ADR):
-      - 06-decisions/index.md
-      - ADR-001 - Choix FastAPI & Postgres: 06-decisions/adr-001-fastapi-vs-flask-django.md
-      - ADR-002 - File d'attente ARQ vs Celery: 06-decisions/adr-002-async-queue-arq-vs-celery.md
-      - Modèle ADR: 06-decisions/template.md
-  - ⚡ CHEATSHEETS:
-      - Vue d'ensemble: 07-cheatsheets/index.md
-      - Git: 07-cheatsheets/git.md
-      - Docker: 07-cheatsheets/docker.md
-      - Kubernetes: 07-cheatsheets/k8s.md
-      - Linux & Bash: 07-cheatsheets/linux.md
-      - SQL & Postgres: 07-cheatsheets/sql.md
-      - Redis: 07-cheatsheets/redis.md
+
