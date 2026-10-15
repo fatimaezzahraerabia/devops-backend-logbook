@@ -71,6 +71,7 @@ markdown_extensions:
 
 plugins:
   - search
+  - awesome-pages
 
 extra:
   social:
@@ -86,19 +87,13 @@ nav:
   - 🗺️ PLAN & ROADMAP:
       - Feuille de route (90 Jours): 00-plan/roadmap.md
   - 📓 JOURNAL:
-      - 01-journal/index.md
-      - 2026 - Semaine 01: 01-journal/2026-w01.md
-      - Modèle de note: 01-journal/template.md
+      - ...
   - 🐍 BACKEND: 02-backend/index.md
   - 🐳 DEVOPS & INFRA: 03-devops/index.md
   - 🚀 PROJETS:
-      - 04-projets/index.md
-      - API Gestion de Tâches (Fil Rouge): 04-projets/api-gestion-taches.md
-      - Modèle Fiche Projet: 04-projets/template.md
+      - ...
   - 🚨 INCIDENTS & POSTMORTEMS:
-      - 05-incidents/index.md
-      - Postmortem #001 - Latence DB: 05-incidents/postmortem-001.md
-      - Modèle Postmortem: 05-incidents/template.md
+      - ...
   - 💡 DÉCISIONS (ADR):
       - 06-decisions/index.md
       - ADR-001 - Choix FastAPI & Postgres: 06-decisions/adr-001-fastapi-vs-flask-django.md
