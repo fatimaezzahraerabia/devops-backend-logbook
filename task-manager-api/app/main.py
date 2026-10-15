@@ -25,7 +25,7 @@ app.include_router(api_router, prefix="/api/v1")
 Instrumentator().instrument(app).expose(app, endpoint="/metrics")
 
 
-@app.get("/", tags=["Root"])
+@app.api_route("/", methods=["GET", "HEAD"], tags=["Root"])
 async def root():
     return {
         "message": f"Welcome to {settings.PROJECT_NAME}",
@@ -35,11 +35,12 @@ async def root():
     }
 
 
-@app.get("/health", tags=["Health"])
+@app.api_route("/health", methods=["GET", "HEAD"], tags=["Health"])
 async def health_check():
     return {
         "status": "healthy",
         "service": settings.PROJECT_NAME,
         "environment": settings.ENVIRONMENT
     }
+
 
