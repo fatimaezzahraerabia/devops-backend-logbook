@@ -10,7 +10,7 @@ public_folder: "/assets/images"
 
 collections:
   - name: "plan"
-    label: "🗺️ Plan & Roadmap"
+    label: "Plan & Roadmap"
     folder: "docs/00-plan"
     create: true
     slug: "{{slug}}"
@@ -19,7 +19,7 @@ collections:
       - { label: "Contenu (Markdown)", name: "body", widget: "markdown" }
 
   - name: "journal"
-    label: "📓 Journal Hebdomadaire"
+    label: "Journal Hebdomadaire"
     folder: "docs/01-journal"
     create: true
     slug: "{{year}}-w{{week}}"
@@ -34,7 +34,7 @@ collections:
       - { label: "Prochaine Étape", name: "next", widget: "markdown" }
 
   - name: "backend"
-    label: "🐍 Backend Engineering"
+    label: "Backend Engineering"
     folder: "docs/02-backend"
     create: true
     slug: "{{slug}}"
@@ -46,7 +46,7 @@ collections:
       - { label: "Contenu (Markdown)", name: "body", widget: "markdown" }
 
   - name: "devops"
-    label: "🐳 DevOps & Infra"
+    label: "DevOps & Infra"
     folder: "docs/03-devops"
     create: true
     slug: "{{slug}}"
@@ -58,7 +58,7 @@ collections:
       - { label: "Contenu (Markdown)", name: "body", widget: "markdown" }
 
   - name: "projets"
-    label: "🚀 Fiches Projets"
+    label: "Fiches Projets"
     folder: "docs/04-projets"
     create: true
     slug: "{{slug}}"
@@ -72,7 +72,7 @@ collections:
       - { label: "Contenu Détaillé (Markdown)", name: "body", widget: "markdown" }
 
   - name: "incidents"
-    label: "🚨 Incidents & Postmortems"
+    label: "Incidents & Postmortems"
     folder: "docs/05-incidents"
     create: true
     slug: "postmortem-{{slug}}"
@@ -88,7 +88,7 @@ collections:
       - { label: "Actions Préventives", name: "preventive_actions", widget: "markdown" }
 
   - name: "decisions"
-    label: "💡 Décisions d'Architecture (ADR)"
+    label: "Décisions d'Architecture (ADR)"
     folder: "docs/06-decisions"
     create: true
     slug: "adr-{{slug}}"
@@ -101,7 +101,7 @@ collections:
       - { label: "Conséquences & Impacts", name: "consequences", widget: "markdown" }
 
   - name: "cheatsheets"
-    label: "⚡ Mémos & Cheatsheets"
+    label: "Mémos & Cheatsheets"
     folder: "docs/07-cheatsheets"
     create: true
     slug: "{{slug}}"

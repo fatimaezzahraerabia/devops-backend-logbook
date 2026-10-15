@@ -1,6 +1,6 @@
-# 🚀 Projet Fil Rouge : API de Gestion de Tâches (Task Manager API)
+# Projet Fil Rouge : API de Gestion de Tâches (Task Manager API)
 
-**Statut** : 🟢 En Production  
+**Statut** : En Production  
 **Dépôt GitHub API** : [github.com/fatimaezzahraerabia/devops-backend-logbook](https://github.com/fatimaezzahraerabia/devops-backend-logbook)  
 **Démo Live (Render)** : [devops-backend-logbook.onrender.com/docs](https://devops-backend-logbook.onrender.com/docs)  
 **Base PostgreSQL** : Neon DB Serverless (Frankfurt eu-central-1)  
