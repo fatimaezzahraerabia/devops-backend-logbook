@@ -109,3 +109,49 @@ collections:
       - { label: "Titre du Mémo", name: "title", widget: "string" }
       - { label: "Outil", name: "tool", widget: "select", options: ["Git", "Docker", "Kubernetes", "Linux & Bash", "SQL & Postgres", "Redis"] }
       - { label: "Contenu des Commandes (Markdown)", name: "body", widget: "markdown" }
+
+  - name: "certifications"
+    label: "Certifications"
+    folder: "docs/08-certifications"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Nom de la Certification", name: "title", widget: "string" }
+      - { label: "Organisme Emetteur", name: "issuer", widget: "string" }
+      - { label: "Date d'Obtention", name: "date", widget: "date" }
+      - { label: "Date d'Expiration", name: "expiry", widget: "date", required: false }
+      - { label: "Identifiant / Numero de Certificat", name: "credential_id", widget: "string", required: false }
+      - { label: "Lien de Verification", name: "verify_url", widget: "string", required: false }
+      - { label: "Description", name: "body", widget: "markdown", required: false }
+
+  - name: "formation"
+    label: "Formation & Diplomes"
+    folder: "docs/09-formation"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Diplome / Formation", name: "title", widget: "string" }
+      - { label: "Etablissement", name: "school", widget: "string" }
+      - { label: "Ville & Pays", name: "location", widget: "string" }
+      - { label: "Annee de Debut", name: "start_year", widget: "string" }
+      - { label: "Annee de Fin", name: "end_year", widget: "string" }
+      - { label: "Domaine", name: "field", widget: "select", options: ["Informatique", "Genie Logiciel", "Reseaux & Telecoms", "DevOps & Cloud", "Mathematiques", "Autre"] }
+      - { label: "Mention / Note", name: "grade", widget: "string", required: false }
+      - { label: "Description & Cours Principaux", name: "body", widget: "markdown", required: false }
+
+  - name: "experience"
+    label: "Experiences Professionnelles"
+    folder: "docs/10-experience"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Titre du Poste", name: "title", widget: "string" }
+      - { label: "Entreprise", name: "company", widget: "string" }
+      - { label: "Type", name: "type", widget: "select", options: ["CDI", "CDD", "Stage", "Alternance", "Freelance", "Projet Academique"] }
+      - { label: "Ville & Pays", name: "location", widget: "string" }
+      - { label: "Date de Debut", name: "start_date", widget: "date" }
+      - { label: "Date de Fin", name: "end_date", widget: "date", required: false }
+      - { label: "Poste Actuel", name: "current", widget: "boolean", default: false }
+      - { label: "Technologies Utilisees", name: "stack", widget: "string" }
+      - { label: "Missions & Realisations", name: "body", widget: "markdown" }
+
