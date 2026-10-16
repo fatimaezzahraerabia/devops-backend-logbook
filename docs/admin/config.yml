@@ -5,10 +5,27 @@ backend:
   base_url: https://decap-proxy.fatimaezzahraerabia23.workers.dev
   auth_endpoint: auth
 
-media_folder: "docs/assets/images"
-public_folder: "/assets/images"
+media_folder: "docs/assets/files"
+public_folder: "/assets/files"
 
 collections:
+  - name: "profil"
+    label: "Profil & CV"
+    files:
+      - name: "profil"
+        label: "Mon Profil"
+        file: "docs/data/profil.yml"
+        fields:
+          - { label: "Nom Complet", name: "full_name", widget: "string" }
+          - { label: "Titre Professionnel", name: "title", widget: "string" }
+          - { label: "Localisation", name: "location", widget: "string" }
+          - { label: "Email de Contact", name: "email", widget: "string" }
+          - { label: "Photo de Profil", name: "photo", widget: "image", media_folder: "/docs/assets/files", public_folder: "/assets/files", required: false }
+          - { label: "CV (PDF a telecharger)", name: "cv_pdf", widget: "file", media_folder: "/docs/assets/files", public_folder: "/assets/files", required: false }
+          - { label: "Lien GitHub", name: "github", widget: "string" }
+          - { label: "Lien LinkedIn", name: "linkedin", widget: "string" }
+          - { label: "Résumé / Bio courte", name: "bio", widget: "text" }
+
   - name: "plan"
     label: "Plan & Roadmap"
     folder: "docs/00-plan"
