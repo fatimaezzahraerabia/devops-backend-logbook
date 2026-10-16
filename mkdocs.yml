@@ -40,6 +40,7 @@ theme:
     - content.code.select
     - content.code.annotate
     - content.action.edit
+    - content.tabs.link
 
 markdown_extensions:
   - pymdownx.superfences:
@@ -68,6 +69,10 @@ markdown_extensions:
   - md_in_html
   - toc:
       permalink: true
+      toc_depth: 3
+
+extra_css:
+  - stylesheets/extra.css
 
 plugins:
   - search
