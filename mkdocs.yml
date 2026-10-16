@@ -73,6 +73,9 @@ plugins:
   - search
   - awesome-pages
 
+hooks:
+  - hooks/dynamic_profile.py
+
 extra:
   social:
     - icon: fontawesome/brands/github

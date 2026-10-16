@@ -172,3 +172,15 @@ collections:
       - { label: "Technologies Utilisees", name: "stack", widget: "string" }
       - { label: "Missions & Realisations", name: "body", widget: "markdown" }
 
+  - name: "code_examples"
+    label: "Exemples de Code"
+    folder: "docs/11-code-examples"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Titre de l'exemple", name: "title", widget: "string" }
+      - { label: "Langage", name: "language", widget: "select", options: ["Python", "JavaScript", "Bash", "SQL"] }
+      - { label: "Code", name: "code", widget: "code", hint: "Saisissez votre code ici" }
+      - { label: "Description", name: "description", widget: "markdown", required: false }
+      - { label: "Lien d'exécution", name: "run_url", widget: "string", required: false, hint: "URL vers un runner externe (ex. Repl.it, RunKit)" }
+

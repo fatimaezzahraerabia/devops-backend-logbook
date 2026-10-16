@@ -1,21 +1,8 @@
-# Fatima-Ezzahrae Rabia
-
-**Ingénieure Backend & DevOps**  
-Python · FastAPI · Docker · PostgreSQL · Kubernetes · CI/CD
-
-[![GitHub](https://img.shields.io/badge/GitHub-fatimaezzahraerabia-181717?style=flat&logo=github)](https://github.com/fatimaezzahraerabia)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Fatima--Ezzahrae%20Rabia-0077B5?style=flat&logo=linkedin)](https://linkedin.com/in/fatima-ezzahrae-rabia)
-[![API Status](https://img.shields.io/website?url=https%3A%2F%2Fdevops-backend-logbook.onrender.com%2Fhealth&label=API%20Live&up_message=online&down_message=offline)](https://devops-backend-logbook.onrender.com/docs)
+<!-- DYNAMIC_PROFILE_START -->
+<!-- DYNAMIC_PROFILE_END -->
 
 ---
 
-## Profil
-
-Ingénieure passionnée par la conception de systèmes Backend robustes et l'automatisation des infrastructures DevOps. Je conçois, teste, conteneurise et déploie des APIs REST asynchrones en suivant l'intégralité du cycle de vie logiciel (SDLC 10 étapes), de la conception à l'observabilité en production.
-
-Contrainte budgétaire assumée : 100% des projets de ce portfolio sont déployés sur des infrastructures cloud gratuites (GitHub Pages, Render, Neon DB, Upstash Redis, Cloudflare Workers).
-
----
 
 ## Competences Techniques
 
