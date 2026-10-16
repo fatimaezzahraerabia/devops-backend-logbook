@@ -1,9 +1,10 @@
-full_name: "Fatima-Ezzahrae Rabia"
-title: "Ingenieure Backend & DevOps"
-location: "Votre Ville, Pays"
-email: "votre.email@exemple.com"
-photo: ""
-cv_pdf: ""
-github: "https://github.com/fatimaezzahraerabia"
-linkedin: "https://linkedin.com/in/fatima-ezzahrae-rabia"
-bio: "Ingenieure passionnee par la conception de systemes Backend robustes et l'automatisation des infrastructures DevOps."
+full_name: Fatima-Ezzahrae Rabia
+title: Ingenieure Backend & DevOps
+location: Votre Ville, Pays
+email: votre.email@exemple.com
+photo: /assets/files/whatsapp-image-2026-09-29-at-16.00.45.jpeg
+cv_pdf: /assets/files/rabia_fz_cv.pdf
+github: https://github.com/fatimaezzahraerabia
+linkedin: https://linkedin.com/in/fatima-ezzahrae-rabia
+bio: Ingenieure passionnee par la conception de systemes Backend robustes et
+  l'automatisation des infrastructures DevOps.
