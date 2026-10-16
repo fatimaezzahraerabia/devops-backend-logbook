@@ -14,14 +14,14 @@ theme:
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: indigo
-      accent: indigo
+      accent: cyan
       toggle:
         icon: material/brightness-7
         name: Passer au mode sombre
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: indigo
-      accent: light-blue
+      accent: cyan
       toggle:
         icon: material/brightness-4
         name: Passer au mode clair
