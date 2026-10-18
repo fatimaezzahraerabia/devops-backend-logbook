@@ -69,15 +69,14 @@ def on_page_markdown(markdown, page, config, files):
     <div class="hero-avatar-placeholder">{initials}</div>
   </div>'''
 
-        # Badges de contact
+        # Badges de contact & statut
         badges = []
         if location and "Votre Ville" not in location:
             badges.append(f'<span><svg style="width: 14px; height: 14px; vertical-align: -2px; fill: currentColor; margin-right: 4px;" viewBox="0 0 384 512"><path d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"/></svg>{location}</span>')
         elif not location:
-            badges.append('<span><svg style="width: 14px; height: 14px; vertical-align: -2px; fill: currentColor; margin-right: 4px;" viewBox="0 0 384 512"><path d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"/></svg>Maroc</span>')
+            badges.append('<span><svg style="width: 14px; height: 14px; vertical-align: -2px; fill: currentColor; margin-right: 4px;" viewBox="0 0 384 512"><path d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"/></svg>Maroc</span>')
 
-        if email and "exemple.com" not in email:
-            badges.append(f'<a href="mailto:{email}"><svg style="width: 14px; height: 14px; vertical-align: -2px; fill: currentColor; margin-right: 4px;" viewBox="0 0 512 512"><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L308.8 340.8c-30.4 22.8-72 22.8-102.4 0L0 176z"/></svg>{email}</a>')
+        badges.append('<span><svg style="width: 10px; height: 10px; vertical-align: 0px; fill: #10b981; margin-right: 6px;" viewBox="0 0 512 512"><circle cx="256" cy="256" r="256"/></svg>À l\'écoute d\'opportunités</span>')
 
         badges_html = ""
         if badges:
@@ -100,6 +99,13 @@ def on_page_markdown(markdown, page, config, files):
     </object>
 '''
 
+        contact_btn_html = ""
+        if email and "exemple.com" not in email:
+            contact_btn_html = f'''<a href="mailto:{email}" class="hero-btn hero-btn-secondary" title="M'envoyer un email">
+        <svg width="18" height="18" style="width: 18px; height: 18px; min-width: 18px; max-width: 18px; flex-shrink: 0; vertical-align: middle; fill: currentColor;" viewBox="0 0 512 512"><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L308.8 340.8c-30.4 22.8-72 22.8-102.4 0L0 176z"/></svg>
+        <span>Me contacter</span>
+      </a>'''
+
         linkedin_btn_html = f'''<a href="{linkedin}" class="hero-btn hero-btn-secondary" target="_blank">
         <svg width="18" height="18" style="width: 18px; height: 18px; min-width: 18px; max-width: 18px; flex-shrink: 0; vertical-align: middle; fill: currentColor;" viewBox="0 0 448 512"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"/></svg>
         <span>LinkedIn</span>
@@ -110,12 +116,14 @@ def on_page_markdown(markdown, page, config, files):
         <span>GitHub</span>
       </a>'''
 
+        # Utiliser un trait d'union insécable pour éviter que Fatima- et Ezzahrae soient scindés
+        display_name = full_name.replace("-", "&#8209;") if full_name else ""
 
         hero_section = f'''<!-- DYNAMIC_PROFILE_START -->
 <div class="hero-container">
   {avatar_html}
   <div class="hero-content">
-    <h1 class="hero-name">{full_name}</h1>
+    <h1 class="hero-name">{display_name}</h1>
     <div class="hero-title">
       <svg style="width: 20px; height: 20px; fill: currentColor;" viewBox="0 0 640 512"><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L514.7 256 428.1 342.6c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112zm-306.8 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L125.3 256l86.6-86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0z"/></svg>
       <span>{title}</span>
@@ -124,11 +132,13 @@ def on_page_markdown(markdown, page, config, files):
     <p class="hero-tagline">{tagline}</p>
     <div class="hero-actions">
       {cv_btn_html}
+      {contact_btn_html}
       {linkedin_btn_html}
       {github_btn_html}
     </div>
   </div>
 </div>
+
 
 {cv_preview_block}
 
