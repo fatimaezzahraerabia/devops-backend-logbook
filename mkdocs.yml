@@ -81,7 +81,10 @@ plugins:
 hooks:
   - hooks/dynamic_profile.py
 
+copyright: Copyright &copy; 2026 Fatima-Ezzahrae Rabia
+
 extra:
+  generator: false
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/fatimaezzahraerabia

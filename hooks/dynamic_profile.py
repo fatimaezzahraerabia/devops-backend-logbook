@@ -2,6 +2,26 @@ import os
 import re
 import yaml
 
+def on_config(config):
+    """
+    Configure globalement le copyright dynamique et désactive la mention 'Made with Material for MkDocs'.
+    """
+    docs_dir = config.get('docs_dir', 'docs')
+    profil_path = os.path.join(docs_dir, 'data', 'profil.yml')
+    full_name = 'Fatima-Ezzahrae Rabia'
+    if os.path.exists(profil_path):
+        try:
+            with open(profil_path, 'r', encoding='utf-8') as f:
+                profil = yaml.safe_load(f) or {}
+                full_name = profil.get('full_name', full_name)
+        except Exception:
+            pass
+    config['copyright'] = f"Copyright &copy; 2026 {full_name}"
+    if 'extra' not in config:
+        config['extra'] = {}
+    config['extra']['generator'] = False
+    return config
+
 def on_page_markdown(markdown, page, config, files):
     """
     Hook MkDocs dynamique :
