@@ -6,7 +6,7 @@
 /* --- HERO SECTION --- */
 .hero-container {
   display: grid;
-  grid-template-columns: 180px 1fr;
+  grid-template-columns: 210px 1fr;
   gap: 2.5rem;
   align-items: center;
   padding: 2.5rem 2.2rem;
@@ -28,28 +28,32 @@
   align-items: center;
 }
 
-/* Cadre de la photo : 3px cyan #4dd0e1 avec halo lumineux */
+/* Cadre rectangulaire de la photo avec bordure cyan et halo */
 .hero img,
 .hero-avatar img {
-  width: 170px !important;
-  height: 170px !important;
-  border-radius: 50% !important;
+  width: 190px !important;
+  height: 230px !important;
+  border-radius: 12px !important; /* Cadre rectangulaire au lieu du cercle */
   object-fit: cover !important;
+  object-position: center !important;
   border: 3px solid #4dd0e1 !important;
-  box-shadow: 0 0 20px rgba(77, 208, 225, 0.3) !important;
-  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+  padding: 4px !important;
+  background: rgba(77, 208, 225, 0.08) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), 0 0 20px rgba(77, 208, 225, 0.25) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease !important;
 }
 
 .hero img:hover,
 .hero-avatar img:hover {
-  transform: scale(1.03) !important;
-  box-shadow: 0 0 28px rgba(77, 208, 225, 0.55) !important;
+  transform: translateY(-3px) scale(1.02) !important;
+  border-color: #80deea !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45), 0 0 28px rgba(77, 208, 225, 0.5) !important;
 }
 
 .hero-avatar-placeholder {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
+  width: 190px;
+  height: 230px;
+  border-radius: 12px;
   background: #4dd0e1;
   color: #0b1329;
   display: flex;
@@ -58,7 +62,7 @@
   font-size: 3.2rem;
   font-weight: 700;
   border: 3px solid #4dd0e1;
-  box-shadow: 0 0 20px rgba(77, 208, 225, 0.3);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), 0 0 20px rgba(77, 208, 225, 0.25);
 }
 
 .hero-content {
@@ -134,7 +138,8 @@
 [data-md-color-scheme="default"] .hero img,
 [data-md-color-scheme="default"] .hero-avatar img {
   border: 3px solid #00acc1 !important;
-  box-shadow: 0 0 18px rgba(0, 172, 193, 0.3) !important;
+  background: rgba(0, 172, 193, 0.06) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1), 0 0 16px rgba(0, 172, 193, 0.25) !important;
 }
 
 /* Boutons alignés avec la même hauteur (42px) */
