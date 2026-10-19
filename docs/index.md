@@ -162,12 +162,16 @@ graph LR
 
 ## Expériences Professionnelles
 
+!!! info "Cycle de Vie & Traçabilité (SDLC & DevOps)"
+    Chaque projet ci-dessous est documenté selon notre démarche d'ingénierie en 10 étapes. Cliquez sur le titre ou sur le bouton de chaque projet pour consulter son **étude de cas détaillée** (Architecture, IaC, CI/CD, Sécurité, Monitoring).
+    Consultez également le [**Guide Méthodologique du Cycle de Vie**](04-projets/guide-cycle-de-vie.md).
+
 <div class="timeline">
   <div class="timeline-item">
     <div class="timeline-dot"></div>
     <div class="timeline-date">02/2026 – 07/2026 | Mohammadia, Maroc</div>
     <div class="timeline-content">
-      <h4>Ingénieure Full Stack / DevOps — PFE @ DBM Maroc</h4>
+      <h4><a href="04-projets/cloud-prive-dbm.md" class="project-title-link">Ingénieure Full Stack / DevOps — PFE @ DBM Maroc <span class="arrow-icon">↗</span></a></h4>
       <div class="timeline-subtitle">Conception et développement d'une plateforme de Cloud privé pour laboratoires virtuels d'apprentissage</div>
       <p class="timeline-desc">
         • <strong>Automatisation d'infrastructure :</strong> Provisioning et virtualisation automatisés de machines virtuelles et conteneurs avec Proxmox VE, Terraform, Ansible, Packer et Cloud-Init.<br>
@@ -185,6 +189,12 @@ graph LR
         <span class="tech-badge">Proxmox VE</span>
         <span class="tech-badge">PostgreSQL</span>
       </div>
+      <div class="project-cta-container">
+        <a href="04-projets/cloud-prive-dbm.md" class="project-card-cta">
+          <span>Consulter le cycle de vie complet du projet (SDLC & DevOps)</span>
+          <svg viewBox="0 0 448 512"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0-105.4 105.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
+        </a>
+      </div>
     </div>
   </div>
 
@@ -192,8 +202,8 @@ graph LR
     <div class="timeline-dot"></div>
     <div class="timeline-date">07/2025 – 10/2025 | Marrakech, Maroc</div>
     <div class="timeline-content">
-      <h4>Développeuse Full Stack (Stage) — Alidantek</h4>
-      <div class="timeline-subtitle">Application de recouvrement intelligente & Moteur de recherche juridique</div>
+      <h4><a href="04-projets/recouvrement-rag-alidantek.md" class="project-title-link">Développeuse Full Stack (Stage) — Alidantek <span class="arrow-icon">↗</span></a></h4>
+      <div class="timeline-subtitle">Application de recouvrement intelligente & Moteur de recherche juridique RAG</div>
       <p class="timeline-desc">
         • Conception d'une architecture microservices automatisant les communications clients avec intégration de LLMs locaux et pipeline RAG.<br>
         • Développement d'un moteur de recherche juridique intelligent avec web scraping automatisé (Python, BeautifulSoup, Flask) et indexation documentaire.
@@ -206,6 +216,12 @@ graph LR
         <span class="tech-badge">LLMs locaux</span>
         <span class="tech-badge">MySQL</span>
       </div>
+      <div class="project-cta-container">
+        <a href="04-projets/recouvrement-rag-alidantek.md" class="project-card-cta">
+          <span>Consulter le cycle de vie complet du projet (SDLC & DevOps)</span>
+          <svg viewBox="0 0 448 512"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0-105.4 105.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
+        </a>
+      </div>
     </div>
   </div>
 
@@ -213,8 +229,8 @@ graph LR
     <div class="timeline-dot"></div>
     <div class="timeline-date">07/2025 – 09/2025 | Mohammedia, Maroc</div>
     <div class="timeline-content">
-      <h4>Développeuse Full Stack (Stage) — 3D Smart Factory</h4>
-      <div class="timeline-subtitle">Plateforme web d'assistant médical intelligent</div>
+      <h4><a href="04-projets/assistant-medical-3dsmart.md" class="project-title-link">Développeuse Full Stack (Stage) — 3D Smart Factory <span class="arrow-icon">↗</span></a></h4>
+      <div class="timeline-subtitle">Plateforme web d'assistant médical intelligent & Télémédecine</div>
       <p class="timeline-desc">
         • Développement d'une plateforme d'assistance médicale avec module de chat IA intelligent, prise de rendez-vous et conseils personnalisés.<br>
         • Backend Java / Spring Boot sécurisé avec JWT, frontend Angular et intégration de modèles NLP Python.
@@ -226,6 +242,12 @@ graph LR
         <span class="tech-badge">JWT</span>
         <span class="tech-badge">Python NLP</span>
       </div>
+      <div class="project-cta-container">
+        <a href="04-projets/assistant-medical-3dsmart.md" class="project-card-cta">
+          <span>Consulter le cycle de vie complet du projet (SDLC & DevOps)</span>
+          <svg viewBox="0 0 448 512"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0-105.4 105.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
+        </a>
+      </div>
     </div>
   </div>
 
@@ -233,8 +255,8 @@ graph LR
     <div class="timeline-dot"></div>
     <div class="timeline-date">04/2024 – 06/2024 | Marrakech, Maroc</div>
     <div class="timeline-content">
-      <h4>Développeuse Full Stack (Stage) — Seratel</h4>
-      <div class="timeline-subtitle">Plateforme e-commerce complète</div>
+      <h4><a href="04-projets/ecommerce-seratel.md" class="project-title-link">Développeuse Full Stack (Stage) — Seratel <span class="arrow-icon">↗</span></a></h4>
+      <div class="timeline-subtitle">Plateforme e-commerce complète & Gestion Commerciale</div>
       <p class="timeline-desc">
         • Conception et développement complet d'une solution e-commerce avec gestion des catalogues, paniers, authentification et commandes en Spring Boot et React.
       </p>
@@ -243,6 +265,12 @@ graph LR
         <span class="tech-badge">Spring Security</span>
         <span class="tech-badge">React</span>
         <span class="tech-badge">MySQL</span>
+      </div>
+      <div class="project-cta-container">
+        <a href="04-projets/ecommerce-seratel.md" class="project-card-cta">
+          <span>Consulter le cycle de vie complet du projet (SDLC & DevOps)</span>
+          <svg viewBox="0 0 448 512"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0-105.4 105.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
+        </a>
       </div>
     </div>
   </div>
@@ -304,7 +332,7 @@ graph LR
 <div class="skills-grid">
   <div class="skill-category-card">
     <div class="skill-category-header">
-      :material-rocket-launch: Pipeline CI/CD DevOps End-to-End
+      :material-rocket-launch: <a href="04-projets/pipeline-devops-end-to-end.md" class="project-title-link">Pipeline CI/CD DevOps End-to-End <span class="arrow-icon">↗</span></a>
     </div>
     <p style="font-size: 0.9rem; margin-bottom: 0.8rem;">
       Chaîne d'automatisation complète de commit à déploiement avec Jenkins, Docker, K8s, Prometheus et Grafana sur Azure. Déploiement en moins de 5 min avec rollback automatique.
@@ -316,11 +344,16 @@ graph LR
       <span class="tech-badge">Prometheus</span>
       <span class="tech-badge">Azure</span>
     </div>
+    <div class="project-cta-container">
+      <a href="04-projets/pipeline-devops-end-to-end.md" class="project-card-cta">
+        <span>Cycle de vie & Architecture →</span>
+      </a>
+    </div>
   </div>
 
   <div class="skill-category-card">
     <div class="skill-category-header">
-      :material-clock-outline: TimeWise — Coach de Productivité
+      :material-clock-outline: <a href="04-projets/timewise-microservices.md" class="project-title-link">TimeWise — Coach de Productivité <span class="arrow-icon">↗</span></a>
     </div>
     <p style="font-size: 0.9rem; margin-bottom: 0.8rem;">
       Application de productivité full-stack basée sur une architecture de microservices pilotée par les événements (EDA). WebSocket, NLP, Docker et CI/CD automatisée.
@@ -332,11 +365,16 @@ graph LR
       <span class="tech-badge">EDA</span>
       <span class="tech-badge">Docker</span>
     </div>
+    <div class="project-cta-container">
+      <a href="04-projets/timewise-microservices.md" class="project-card-cta">
+        <span>Cycle de vie & Architecture →</span>
+      </a>
+    </div>
   </div>
 
   <div class="skill-category-card">
     <div class="skill-category-header">
-      :material-recycle: SmartWaste — Gestion Temps Réel
+      :material-recycle: <a href="04-projets/smartwaste-iot.md" class="project-title-link">SmartWaste — Gestion Temps Réel <span class="arrow-icon">↗</span></a>
     </div>
     <p style="font-size: 0.9rem; margin-bottom: 0.8rem;">
       Application citoyenne et tableau de bord administrateur pour la gestion optimisée des déchets en temps réel. Déploiement cloud via Docker et CI/CD GitHub Actions.
@@ -348,11 +386,16 @@ graph LR
       <span class="tech-badge">MySQL</span>
       <span class="tech-badge">GitHub Actions</span>
     </div>
+    <div class="project-cta-container">
+      <a href="04-projets/smartwaste-iot.md" class="project-card-cta">
+        <span>Cycle de vie & Architecture →</span>
+      </a>
+    </div>
   </div>
 
   <div class="skill-category-card">
     <div class="skill-category-header">
-      :material-book-open-page-variant: Engineering Logbook
+      :material-book-open-page-variant: <a href="04-projets/guide-cycle-de-vie.md" class="project-title-link">Engineering Logbook & Méthodologie <span class="arrow-icon">↗</span></a>
     </div>
     <p style="font-size: 0.9rem; margin-bottom: 0.8rem;">
       Ce site web interactif — portfolio d'ingénierie et carnet de bord technique documentant l'ensemble du cycle SDLC (10 étapes), avec CMS headless découplé.
@@ -362,6 +405,11 @@ graph LR
       <span class="tech-badge">GitHub Pages</span>
       <span class="tech-badge">Decap CMS</span>
       <span class="tech-badge">Cloudflare Workers</span>
+    </div>
+    <div class="project-cta-container">
+      <a href="04-projets/guide-cycle-de-vie.md" class="project-card-cta">
+        <span>Découvrir la Méthodologie →</span>
+      </a>
     </div>
   </div>
 </div>

@@ -512,3 +512,84 @@
   height: 1px;
   background: linear-gradient(to right, transparent, rgba(77, 208, 225, 0.4), transparent);
 }
+
+/* --- LIENS ET BOUTONS DE CYCLE DE PROJET --- */
+.project-title-link {
+  color: inherit !important;
+  text-decoration: none !important;
+  transition: all 0.2s ease !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.35rem !important;
+}
+
+.project-title-link:hover {
+  color: #4dd0e1 !important;
+  text-decoration: none !important;
+}
+
+.project-title-link .arrow-icon {
+  font-size: 0.85em;
+  opacity: 0.7;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.project-title-link:hover .arrow-icon {
+  transform: translate(2px, -2px);
+  opacity: 1;
+}
+
+.project-cta-container {
+  margin-top: 0.85rem;
+}
+
+.project-card-cta {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  padding: 0.42rem 0.9rem !important;
+  font-size: 0.82rem !important;
+  font-weight: 600 !important;
+  color: #4dd0e1 !important;
+  background: rgba(77, 208, 225, 0.08) !important;
+  border: 1px solid rgba(77, 208, 225, 0.35) !important;
+  border-radius: 6px !important;
+  text-decoration: none !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.project-card-cta:hover {
+  background: rgba(77, 208, 225, 0.2) !important;
+  border-color: #4dd0e1 !important;
+  color: #ffffff !important;
+  transform: translateX(4px);
+  box-shadow: 0 4px 14px rgba(77, 208, 225, 0.3) !important;
+}
+
+.project-card-cta svg {
+  width: 12px !important;
+  height: 12px !important;
+  fill: currentColor;
+  transition: transform 0.2s ease;
+}
+
+.project-card-cta:hover svg {
+  transform: translateX(3px);
+}
+
+[data-md-color-scheme="default"] .project-title-link:hover {
+  color: #00838f !important;
+}
+
+[data-md-color-scheme="default"] .project-card-cta {
+  color: #00838f !important;
+  background: rgba(0, 131, 143, 0.06) !important;
+  border-color: rgba(0, 131, 143, 0.3) !important;
+}
+
+[data-md-color-scheme="default"] .project-card-cta:hover {
+  background: #00838f !important;
+  border-color: #00838f !important;
+  color: #ffffff !important;
+}
+
