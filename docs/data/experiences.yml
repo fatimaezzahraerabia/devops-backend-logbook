@@ -1,0 +1,72 @@
+experiences:
+  - id: cloud-prive-dbm
+    title: Ingénieure Full Stack / DevOps — PFE @ DBM Maroc
+    company: DBM Maroc
+    period: 02/2026 – 07/2026
+    location: Mohammadia, Maroc
+    subtitle: Conception et développement d'une plateforme de Cloud privé pour laboratoires virtuels d'apprentissage
+    description:
+      - "Automatisation d'infrastructure : Provisioning et virtualisation automatisés de machines virtuelles et conteneurs avec Proxmox VE, Terraform, Ansible, Packer et Cloud-Init."
+      - "Orchestration & CI/CD : Conteneurisation de la plateforme avec Docker, déploiement sur cluster K3s, création de pipelines Jenkins as Code (JCasC, Job DSL)."
+      - "Développement Backend : Architecture hexagonale en Java 21 / Spring Boot 3.5, intégration du protocole LTI 1.3 Advantage (OIDC, OAuth 2.0) pour SSO Moodle, accès distant via WebSockets / noVNC."
+    stack:
+      - Java 21
+      - Spring Boot 3.5
+      - Docker
+      - K3s
+      - Jenkins
+      - Terraform
+      - Ansible
+      - Proxmox VE
+      - PostgreSQL
+    project_page: 04-projets/cloud-prive-dbm.md
+
+  - id: recouvrement-rag-alidantek
+    title: Développeuse Full Stack (Stage) — Alidantek
+    company: Alidantek
+    period: 07/2025 – 10/2025
+    location: Marrakech, Maroc
+    subtitle: Application de recouvrement intelligente & Moteur de recherche juridique RAG
+    description:
+      - "Conception d'une architecture microservices automatisant les communications clients avec intégration de LLMs locaux et pipeline RAG."
+      - "Développement d'un moteur de recherche juridique intelligent avec web scraping automatisé (Python, BeautifulSoup, Flask) et indexation documentaire."
+    stack:
+      - Python
+      - Flask
+      - Node.js
+      - RAG
+      - LLMs locaux
+      - MySQL
+    project_page: 04-projets/recouvrement-rag-alidantek.md
+
+  - id: assistant-medical-3dsmart
+    title: Développeuse Full Stack (Stage) — 3D Smart Factory
+    company: 3D Smart Factory
+    period: 07/2025 – 09/2025
+    location: Mohammedia, Maroc
+    subtitle: Plateforme web d'assistant médical intelligent & Télémédecine
+    description:
+      - "Développement d'une plateforme d'assistance médicale avec module de chat IA intelligent, prise de rendez-vous et conseils personnalisés."
+      - "Backend Java / Spring Boot sécurisé avec JWT, frontend Angular et intégration de modèles NLP Python."
+    stack:
+      - Java
+      - Spring Boot
+      - Angular
+      - JWT
+      - Python NLP
+    project_page: 04-projets/assistant-medical-3dsmart.md
+
+  - id: ecommerce-seratel
+    title: Développeuse Full Stack (Stage) — Seratel
+    company: Seratel
+    period: 04/2024 – 06/2024
+    location: Marrakech, Maroc
+    subtitle: Plateforme e-commerce complète & Gestion Commerciale
+    description:
+      - "Conception et développement complet d'une solution e-commerce avec gestion des catalogues, paniers, authentification et commandes en Spring Boot et React."
+    stack:
+      - Spring Boot
+      - Spring Security
+      - React
+      - MySQL
+    project_page: 04-projets/ecommerce-seratel.md

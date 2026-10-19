@@ -26,6 +26,25 @@ collections:
           - { label: "Lien LinkedIn", name: "linkedin", widget: "string" }
           - { label: "Résumé / Bio courte", name: "bio", widget: "text" }
 
+      - name: "experiences"
+        label: "Expériences & Liaison Projets"
+        file: "docs/data/experiences.yml"
+        fields:
+          - label: "Expériences & Projets"
+            name: "experiences"
+            widget: "list"
+            summary: "{{fields.title}} ({{fields.period}})"
+            fields:
+              - { label: "Identifiant / Slug", name: "id", widget: "string" }
+              - { label: "Titre du Poste & Entreprise", name: "title", widget: "string" }
+              - { label: "Entreprise", name: "company", widget: "string" }
+              - { label: "Période", name: "period", widget: "string", hint: "ex: 02/2026 – 07/2026" }
+              - { label: "Lieu", name: "location", widget: "string", hint: "ex: Mohammadia, Maroc" }
+              - { label: "Sous-titre / Sujet du projet", name: "subtitle", widget: "string" }
+              - { label: "Points Clés / Réalisations", name: "description", widget: "list", field: { label: "Réalisation", name: "item", widget: "text" } }
+              - { label: "Technologies (Stack)", name: "stack", widget: "list", field: { label: "Tech", name: "item", widget: "string" } }
+              - { label: "Page de Projet Liée (Cycle de Vie)", name: "project_page", widget: "string", required: false, hint: "Chemin relatif, ex: 04-projets/cloud-prive-dbm.md" }
+
   - name: "plan"
     label: "Plan & Roadmap"
     folder: "docs/00-plan"

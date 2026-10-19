@@ -41,6 +41,19 @@ def on_page_markdown(markdown, page, config, files):
         except Exception as e:
             print(f"[hook:dynamic_profile] Erreur de lecture de {profil_path}: {e}")
 
+    exp_path = os.path.join(docs_dir, 'data', 'experiences.yml')
+    experiences = []
+    if os.path.exists(exp_path):
+        try:
+            with open(exp_path, 'r', encoding='utf-8') as f:
+                exp_data = yaml.safe_load(f) or []
+                if isinstance(exp_data, dict):
+                    experiences = exp_data.get('experiences', [])
+                elif isinstance(exp_data, list):
+                    experiences = exp_data
+        except Exception as e:
+            print(f"[hook:dynamic_profile] Erreur de lecture de {exp_path}: {e}")
+
     # Normalisation des chemins (supprimer le slash initial pour GitHub Pages)
     def clean_path(val):
         if not val:
@@ -76,8 +89,10 @@ def on_page_markdown(markdown, page, config, files):
         markdown = markdown.replace(f"{{{{ {var} }}}}", str(val))
         markdown = markdown.replace(f"{{{{{var}}}}}", str(val))
 
+    src_path = page.file.src_path.replace('\\', '/')
+
     # Génération du Hero pour index.md
-    if page.file.src_path == "index.md":
+    if src_path == "index.md":
         # Avatar circulaire
         if photo:
             avatar_html = f'''<div class="hero-avatar">
@@ -239,4 +254,131 @@ def on_page_markdown(markdown, page, config, files):
         else:
             markdown = hero_section + "\n\n" + markdown
 
+        # Génération dynamique de la timeline des expériences & projets
+        if experiences:
+            timeline_html = f'''<!-- DYNAMIC_EXPERIENCES_START -->
+{_build_timeline_html(experiences, docs_dir)}
+<!-- DYNAMIC_EXPERIENCES_END -->'''
+            exp_pattern = r"<!-- DYNAMIC_EXPERIENCES_START -->.*?<!-- DYNAMIC_EXPERIENCES_END -->"
+            if re.search(exp_pattern, markdown, flags=re.DOTALL):
+                markdown = re.sub(exp_pattern, timeline_html, markdown, flags=re.DOTALL)
+
+    elif src_path == "10-experience/index.md":
+        if experiences:
+            list_md = f'''<!-- DYNAMIC_EXPERIENCES_LIST_START -->
+{_build_experiences_list_markdown(experiences, docs_dir)}
+<!-- DYNAMIC_EXPERIENCES_LIST_END -->'''
+            list_pattern = r"<!-- DYNAMIC_EXPERIENCES_LIST_START -->.*?<!-- DYNAMIC_EXPERIENCES_LIST_END -->"
+            if re.search(list_pattern, markdown, flags=re.DOTALL):
+                markdown = re.sub(list_pattern, list_md, markdown, flags=re.DOTALL)
+
     return markdown
+
+def _build_timeline_html(experiences, docs_dir):
+    items_html = []
+    for exp in experiences:
+        exp_id = exp.get('id', '')
+        title = exp.get('title', '')
+        period = exp.get('period', '')
+        location = exp.get('location', '')
+        subtitle = exp.get('subtitle', '')
+        desc = exp.get('description', [])
+        stack = exp.get('stack', [])
+        project_page = exp.get('project_page', '')
+
+        # Résolution dynamique automatique de la page de projet si non spécifiée
+        if not project_page and exp_id:
+            candidate = os.path.join(docs_dir, '04-projets', f'{exp_id}.md')
+            if os.path.exists(candidate):
+                project_page = f'04-projets/{exp_id}.md'
+
+        date_line = f"{period} | {location}" if location else period
+
+        # Titre cliquable si page de projet liée
+        if project_page:
+            title_html = f'<a href="{project_page}" class="project-title-link">{title} <span class="arrow-icon">↗</span></a>'
+        else:
+            title_html = title
+
+        # Description
+        if isinstance(desc, list):
+            desc_lines = []
+            for d in desc:
+                clean_d = str(d).strip()
+                if not clean_d.startswith('•') and not clean_d.startswith('-'):
+                    if ' : ' in clean_d and not clean_d.startswith('<strong>'):
+                        lbl, rest = clean_d.split(' : ', 1)
+                        clean_d = f"• <strong>{lbl} :</strong> {rest}"
+                    else:
+                        clean_d = f"• {clean_d}"
+                desc_lines.append(clean_d)
+            desc_html = "<br>\n        ".join(desc_lines)
+        else:
+            desc_html = str(desc)
+
+        # Badges stack
+        stack_html = "".join([f'<span class="tech-badge">{tech}</span>\n        ' for tech in stack])
+
+        # Bouton d'action vers le cycle complet de projet
+        cta_html = ""
+        if project_page:
+            cta_html = f'''<div class="project-cta-container">
+        <a href="{project_page}" class="project-card-cta">
+          <span>Consulter le cycle de vie complet du projet (SDLC & DevOps)</span>
+          <svg viewBox="0 0 448 512"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0-105.4 105.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
+        </a>
+      </div>'''
+
+        item = f'''  <div class="timeline-item">
+    <div class="timeline-dot"></div>
+    <div class="timeline-date">{date_line}</div>
+    <div class="timeline-content">
+      <h4>{title_html}</h4>
+      <div class="timeline-subtitle">{subtitle}</div>
+      <p class="timeline-desc">
+        {desc_html}
+      </p>
+      <div>
+        {stack_html}
+      </div>
+      {cta_html}
+    </div>
+  </div>'''
+        items_html.append(item)
+
+    return '<div class="timeline">\n' + "\n\n".join(items_html) + '\n</div>'
+
+def _build_experiences_list_markdown(experiences, docs_dir):
+    blocks = []
+    for i, exp in enumerate(experiences, start=1):
+        exp_id = exp.get('id', '')
+        title = exp.get('title', '')
+        period = exp.get('period', '')
+        location = exp.get('location', '')
+        subtitle = exp.get('subtitle', '')
+        stack = exp.get('stack', [])
+        project_page = exp.get('project_page', '')
+
+        if not project_page and exp_id:
+            candidate = os.path.join(docs_dir, '04-projets', f'{exp_id}.md')
+            if os.path.exists(candidate):
+                project_page = f'04-projets/{exp_id}.md'
+
+        stack_str = ", ".join(stack)
+        loc_str = f" | {location}" if location else ""
+
+        link_line = ""
+        if project_page:
+            rel_page = project_page
+            if not rel_page.startswith('../') and not rel_page.startswith('/'):
+                rel_page = f"../{rel_page}"
+            link_line = f"\n* 👉 **[:material-arrow-right-circle: Consulter le cycle de vie complet du projet (SDLC & DevOps)]({rel_page})**"
+
+        block = f'''### {i}. {title}
+* **Période** : {period}{loc_str}
+* **Projet** : {subtitle}
+* **Technologies** : {stack_str}{link_line}'''
+        blocks.append(block)
+
+    return "\n\n---\n\n".join(blocks)
+
