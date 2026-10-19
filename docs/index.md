@@ -225,7 +225,7 @@ graph LR
 <div class="skills-grid">
   <div class="skill-category-card">
     <div class="skill-category-header">
-      :material-rocket-launch: <a href="04-projets/pipeline-devops-end-to-end.md" class="project-title-link">Pipeline CI/CD DevOps End-to-End <span class="arrow-icon">↗</span></a>
+      :material-rocket-launch: <a href="04-projets/pipeline-devops-end-to-end/" class="project-title-link">Pipeline CI/CD DevOps End-to-End <span class="arrow-icon">↗</span></a>
     </div>
     <p style="font-size: 0.9rem; margin-bottom: 0.8rem;">
       Chaîne d'automatisation complète de commit à déploiement avec Jenkins, Docker, K8s, Prometheus et Grafana sur Azure. Déploiement en moins de 5 min avec rollback automatique.
@@ -238,7 +238,7 @@ graph LR
       <span class="tech-badge">Azure</span>
     </div>
     <div class="project-cta-container">
-      <a href="04-projets/pipeline-devops-end-to-end.md" class="project-card-cta">
+      <a href="04-projets/pipeline-devops-end-to-end/" class="project-card-cta">
         <span>Cycle de vie & Architecture →</span>
       </a>
     </div>
@@ -246,7 +246,7 @@ graph LR
 
   <div class="skill-category-card">
     <div class="skill-category-header">
-      :material-clock-outline: <a href="04-projets/timewise-microservices.md" class="project-title-link">TimeWise — Coach de Productivité <span class="arrow-icon">↗</span></a>
+      :material-clock-outline: <a href="04-projets/timewise-microservices/" class="project-title-link">TimeWise — Coach de Productivité <span class="arrow-icon">↗</span></a>
     </div>
     <p style="font-size: 0.9rem; margin-bottom: 0.8rem;">
       Application de productivité full-stack basée sur une architecture de microservices pilotée par les événements (EDA). WebSocket, NLP, Docker et CI/CD automatisée.
@@ -259,7 +259,7 @@ graph LR
       <span class="tech-badge">Docker</span>
     </div>
     <div class="project-cta-container">
-      <a href="04-projets/timewise-microservices.md" class="project-card-cta">
+      <a href="04-projets/timewise-microservices/" class="project-card-cta">
         <span>Cycle de vie & Architecture →</span>
       </a>
     </div>
@@ -267,7 +267,7 @@ graph LR
 
   <div class="skill-category-card">
     <div class="skill-category-header">
-      :material-recycle: <a href="04-projets/smartwaste-iot.md" class="project-title-link">SmartWaste — Gestion Temps Réel <span class="arrow-icon">↗</span></a>
+      :material-recycle: <a href="04-projets/smartwaste-iot/" class="project-title-link">SmartWaste — Gestion Temps Réel <span class="arrow-icon">↗</span></a>
     </div>
     <p style="font-size: 0.9rem; margin-bottom: 0.8rem;">
       Application citoyenne et tableau de bord administrateur pour la gestion optimisée des déchets en temps réel. Déploiement cloud via Docker et CI/CD GitHub Actions.
@@ -280,7 +280,7 @@ graph LR
       <span class="tech-badge">GitHub Actions</span>
     </div>
     <div class="project-cta-container">
-      <a href="04-projets/smartwaste-iot.md" class="project-card-cta">
+      <a href="04-projets/smartwaste-iot/" class="project-card-cta">
         <span>Cycle de vie & Architecture →</span>
       </a>
     </div>
@@ -288,7 +288,7 @@ graph LR
 
   <div class="skill-category-card">
     <div class="skill-category-header">
-      :material-book-open-page-variant: <a href="04-projets/guide-cycle-de-vie.md" class="project-title-link">Engineering Logbook & Méthodologie <span class="arrow-icon">↗</span></a>
+      :material-book-open-page-variant: <a href="04-projets/guide-cycle-de-vie/" class="project-title-link">Engineering Logbook & Méthodologie <span class="arrow-icon">↗</span></a>
     </div>
     <p style="font-size: 0.9rem; margin-bottom: 0.8rem;">
       Ce site web interactif — portfolio d'ingénierie et carnet de bord technique documentant l'ensemble du cycle SDLC (10 étapes), avec CMS headless découplé.
@@ -300,7 +300,7 @@ graph LR
       <span class="tech-badge">Cloudflare Workers</span>
     </div>
     <div class="project-cta-container">
-      <a href="04-projets/guide-cycle-de-vie.md" class="project-card-cta">
+      <a href="04-projets/guide-cycle-de-vie/" class="project-card-cta">
         <span>Découvrir la Méthodologie →</span>
       </a>
     </div>

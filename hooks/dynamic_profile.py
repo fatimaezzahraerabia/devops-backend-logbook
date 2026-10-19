@@ -274,6 +274,27 @@ def on_page_markdown(markdown, page, config, files):
 
     return markdown
 
+def _to_web_url(path):
+    """
+    Convertit un chemin Markdown (ex: '04-projets/cloud-prive-dbm.md')
+    en URL web propre MkDocs (ex: '04-projets/cloud-prive-dbm/').
+    Évite ainsi les erreurs 404 sur GitHub Pages.
+    """
+    if not path:
+        return ""
+    p = str(path).strip().replace('\\', '/')
+    while p.startswith('/'):
+        p = p[1:]
+    if p.endswith('.md'):
+        p = p[:-3]
+    if p.endswith('/index'):
+        p = p[:-5]
+    elif p == 'index':
+        p = ''
+    if p and not p.endswith('/'):
+        p += '/'
+    return p
+
 def _build_timeline_html(experiences, docs_dir):
     items_html = []
     for exp in experiences:
@@ -293,10 +314,11 @@ def _build_timeline_html(experiences, docs_dir):
                 project_page = f'04-projets/{exp_id}.md'
 
         date_line = f"{period} | {location}" if location else period
+        web_url = _to_web_url(project_page)
 
         # Titre cliquable si page de projet liée
-        if project_page:
-            title_html = f'<a href="{project_page}" class="project-title-link">{title} <span class="arrow-icon">↗</span></a>'
+        if web_url:
+            title_html = f'<a href="{web_url}" class="project-title-link">{title} <span class="arrow-icon">↗</span></a>'
         else:
             title_html = title
 
@@ -321,9 +343,9 @@ def _build_timeline_html(experiences, docs_dir):
 
         # Bouton d'action vers le cycle complet de projet
         cta_html = ""
-        if project_page:
+        if web_url:
             cta_html = f'''<div class="project-cta-container">
-        <a href="{project_page}" class="project-card-cta">
+        <a href="{web_url}" class="project-card-cta">
           <span>Consulter le cycle de vie complet du projet (SDLC & DevOps)</span>
           <svg viewBox="0 0 448 512"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0-105.4 105.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
         </a>
@@ -372,6 +394,8 @@ def _build_experiences_list_markdown(experiences, docs_dir):
             rel_page = project_page
             if not rel_page.startswith('../') and not rel_page.startswith('/'):
                 rel_page = f"../{rel_page}"
+            if not rel_page.endswith('.md'):
+                rel_page = rel_page.rstrip('/') + '.md'
             link_line = f"\n* 👉 **[:material-arrow-right-circle: Consulter le cycle de vie complet du projet (SDLC & DevOps)]({rel_page})**"
 
         block = f'''### {i}. {title}
@@ -381,4 +405,6 @@ def _build_experiences_list_markdown(experiences, docs_dir):
         blocks.append(block)
 
     return "\n\n---\n\n".join(blocks)
+
+
 
