@@ -18,7 +18,7 @@ Conception et mise en production d'une application e-commerce moderne permettant
 
 ```mermaid
 flowchart LR
-    Browser["🖥️ Interface Client (React.js)"] -->|REST API (JSON)| API["Spring Boot 3 REST Backend"]
+    Browser["🖥️ Interface Client (React.js)"] -->|"REST API (JSON)"| API["Spring Boot 3 REST Backend"]
     API --> Security["Spring Security & Authentification JWT"]
     API --> JPA["Spring Data JPA / Hibernate"]
     JPA --> DB[("Base de Données MySQL")]

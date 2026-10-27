@@ -43,10 +43,7 @@ flowchart TB
     subgraph CoreBackend ["⚙️ Backend Plateforme (Java 21 / Spring Boot 3.5)"]
         direction TB
         API["API Gateway & Controllers REST"]
-        HexCore["Domaine Métier (Architecture Hexagonale)
-        • Quotas & Politiques de Lab
-        • Cycle de vie sessions
-        • Audit & Facturation"]
+        HexCore["Domaine Métier (Architecture Hexagonale)<br/>• Quotas & Politiques de Lab<br/>• Cycle de vie sessions<br/>• Audit & Facturation"]
         AdapterProxmox["Adaptateur Proxmox REST API"]
         AdapterK3s["Adaptateur Kubernetes (K3s Client)"]
         AdapterWS["Passerelle WebSocket / noVNC"]
@@ -62,7 +59,7 @@ flowchart TB
         Browser["Interface Web (Console noVNC HTML5)"]
     end
 
-    Moodle -->|LTI Launch (JWT RS256)| OIDC
+    Moodle -->|"LTI Launch (JWT RS256)"| OIDC
     OIDC --> Traefik
     Traefik --> API
     API --> HexCore
@@ -73,13 +70,13 @@ flowchart TB
 
     AdapterProxmox -->|Provisioning QEMU/KVM| PVE
     AdapterK3s -->|Orchestration Pods| K3s
-    Browser <-->|WebSocket wss://| AdapterWS
-    AdapterWS <-->|Proxy VNC / SPICE| PVE
+    Browser <-->|"WebSocket wss://"| AdapterWS
+    AdapterWS <-->|"Proxy VNC / SPICE"| PVE
 
     classDef highlight fill:#0f172a,stroke:#4dd0e1,stroke-width:2px,color:#fff;
     classDef infra fill:#1e293b,stroke:#80deea,stroke-width:1px,color:#e2e8f0;
-    class CoreBackend,HexCore highlight;
-    class InfraVirtualization,PVE,K3s infra;
+    class HexCore highlight;
+    class PVE,K3s infra;
 ```
 
 ---
